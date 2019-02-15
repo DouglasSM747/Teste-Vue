@@ -20,7 +20,7 @@
                           </v-list-tile-avatar>
                         </td>
                         <td class="text-xs">{{props.item.name}}</td>
-                        <td class="text-xs">{{ props.item.private }}</td>
+                        <td class="text-xs">{{ props.item.description }}</td>
                         <td class="text-xs">{{ props.item.size }}</td>
                       </tr>
                     </template>
@@ -45,7 +45,7 @@ export default {
       mainHeaders: [
           { text: '', value: 'avatar' },
           { text: 'Name Repository', value: 'name' },
-          { text: 'Privado', value: 'star' },
+          { text: 'Descricao', value: 'star' },
           { text: 'Size', value: 'forks' }
       ],
       mainItems: [
@@ -56,7 +56,7 @@ export default {
   },
   mounted(){
     var self = this;
-    axios.get('https://api.github.com/user/repos?access_token=2852ee5b0e3e6a56c17b59ea8609f1b917b9a934')
+    axios.get('https://api.github.com/users/AndersenLab/repos')
     .then(function(res){
       self.mainItems = res.data;
       //console.log(self.mainItems[0].name);
