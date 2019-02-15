@@ -56,7 +56,7 @@ export default {
   },
   mounted(){
     var self = this;
-    axios.get('https://api.github.com/user/repos?access_token=ceb4b98e54a7c3804bd26791929db99400da2741')
+    axios.get('https://api.github.com/user/repos?access_token=2852ee5b0e3e6a56c17b59ea8609f1b917b9a934')
     .then(function(res){
       self.mainItems = res.data;
       //console.log(self.mainItems[0].name);
